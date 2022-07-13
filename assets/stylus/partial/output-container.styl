@@ -1,0 +1,56 @@
+#output-container
+  position fixed
+  top -1000%
+  left -1000%
+  width 900px
+  background #333
+  z-index 89648964
+
+  .output-banner
+    position relative
+    width 100%
+    height 0
+    padding-top 200px
+    background-size cover
+    background-position center
+    background-repeat no-repeat
+    background-image url('/images/cover.png')
+    background-color #000
+    margin-bottom 50px
+
+    +below(__)
+      margin-bottom 100px
+
+    &:after
+      content ''
+      position absolute
+      bottom -50px
+      left 0
+      right 0
+      height 50px
+      background red
+      background #000
+      background linear-gradient(180deg, #000 0%, #333 100%)
+      z-index 8964
+
+  ul.dots
+    margin-top -50px
+    padding 50px !important
+    max-width 800px !important
+
+    &:before
+      left 50px !important
+      top 50px !important
+
+    &:after
+      right 50px !important
+      top 50px !important
+
+    &.selected-row-0-24:before
+    &.selected-row-4-20:after
+      width calc(100% * 1.38 - 100px) !important
+
+    .dot-text-wrapper span
+      line-height 1.2rem !important
+      font-size 1.2rem !important
+      padding 10px !important

@@ -1,0 +1,59 @@
+#==============================================================
+# Debug mode
+#==============================================================
+localhost: http://localhost:3000
+# debug : true
+debug : false
+
+
+#==============================================================
+# Maintain mode
+#==============================================================
+# maintain : true
+maintain : false
+
+
+#==============================================================
+# Administator info
+#==============================================================
+admin_name: 朕的產生器
+admin_email: bmooooo.dev@gmail.com
+
+
+#==============================================================
+# Site settings
+#==============================================================
+site_name         : 送中連連看
+site_title        : 送中連連看
+site_description  : 想當第一批免費送中的旅客？立刻來做送中賓果大挑戰資格測驗！
+site_keywords     : 香港,FreeHongKong,反送中,中國,六四,8964
+site_url          : https://free-beijing-tour-connection.unlink.men
+site_version      : 1.1.5
+og_type           : website
+og_image          : https://free-beijing-tour-connection.unlink.men/images/fb.jpg
+ga_track_id       : UA-124037846-2
+
+
+#==============================================================
+# Facebook APP
+#==============================================================
+fb_app_id: XXXXXXXXXXXXXXXX
+fb_app_version: v2.5
+
+
+#==============================================================
+# Build exclude
+#==============================================================
+exclude:
+  - gulpfile.js
+  - package.json
+  - node_modules
+  - assets
+
+
+#==============================================================
+# Html compress config
+#==============================================================
+compress_html:
+  clippings: all
+

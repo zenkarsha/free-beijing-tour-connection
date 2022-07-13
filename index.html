@@ -1,0 +1,43 @@
+---
+layout: default
+additional_script:
+  - /js/home.js
+---
+
+<div class="page-banner">
+  <div class="page-description">
+    想當第一批免費送中的旅客？<br />
+    立刻來做<span class="red-text">送中賓果大挑戰</span>資格測驗！<br />
+    請勾選下方與你相符的敘述：
+  </div>
+</div>
+<div id="app">
+  <ul id="dots" v-show="dots.length > 0" v-bind:class="[
+    'dots',
+    !selected_rows['row_0_4'] ? '' : 'selected-row-0-4',
+    !selected_rows['row_5_9'] ? '' : 'selected-row-5-9',
+    !selected_rows['row_10_14'] ? '' : 'selected-row-10-14',
+    !selected_rows['row_15_19'] ? '' : 'selected-row-15-19',
+    !selected_rows['row_20_24'] ? '' : 'selected-row-20-24',
+    !selected_rows['row_0_20'] ? '' : 'selected-row-0-20',
+    !selected_rows['row_1_21'] ? '' : 'selected-row-1-21',
+    !selected_rows['row_2_22'] ? '' : 'selected-row-2-22',
+    !selected_rows['row_3_23'] ? '' : 'selected-row-3-23',
+    !selected_rows['row_4_24'] ? '' : 'selected-row-4-24',
+    !selected_rows['row_0_24'] ? '' : 'selected-row-0-24',
+    !selected_rows['row_4_20'] ? '' : 'selected-row-4-20'
+  ]">
+    <li class="dot-item" v-for="(item, index) in dots" :key="'fbtdot-' + index">
+      <dot-item :config="item" :dot_index="index" v-on:add_dot="dot_index => handle_add_dot(dot_index)" v-on:remove_dot="dot_index => handle_remove_dot(dot_index)"></dot-item>
+    </li>
+  </ul>
+  <div class="rows-counter" v-show="rows_counter > 0">
+    <download-button></download-button><br />
+    恭喜！您已符合送中資格，已集滿 {! rows_counter !} 條線<br />
+    <a href="https://zh.wikipedia.org/wiki/中华人民共和国羁押场所" class="red-text" target="_blank">了解更多資訊</a>
+  </div>
+  <div id="output-container">
+    <div class="output-banner"></div>
+    <div id="output-dots"></div>
+  </div>
+</div>
