@@ -1,14 +1,5 @@
-Jekyll starter
-==============
+# 送中連連看
 
-### Development
-```bash
-# Clone repo to your local
-$ git clone https://github.com/kxgio/jekyll-starter.git
+[http://free-beijing-tour-connection.unlink.men/](http://free-beijing-tour-connection.unlink.men/)
 
-# Install dependencies listed in package.json
-$ yarn install
-
-# Start developing
-$ gulp
-```
+製作時間：2014年
